@@ -1,17 +1,15 @@
-import { useState } from 'react'
+import Navbar from './components/common/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-4">
-      <h1 className="text-3xl font-bold mb-4">Lendora Frontend</h1>
-      <button
-        className="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-white font-medium cursor-pointer"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        Count is {count}
-      </button>
+    <div className="min-h-screen bg-slate-900 text-slate-100 flex flex-col">
+      <Navbar />
+      <main className="flex-1 flex flex-col items-center justify-center p-8 text-center">
+        <h1 className="text-4xl font-bold mb-4 tracking-tight">Welcome to Lendora</h1>
+        <p className="text-slate-400 max-w-md">
+          Peer-to-peer lending and rental platform. Frontend environment ready.
+        </p>
+      </main>
     </div>
   )
 }
