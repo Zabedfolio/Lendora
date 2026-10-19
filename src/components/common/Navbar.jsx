@@ -69,13 +69,13 @@ export default function Navbar() {
 
           {/* Right Action Elements */}
           <div className="hidden md:flex items-center gap-4 shrink-0">
-            {/* Highlighted List Your Gear Pill */}
+            {/* Highlighted List Your Gear — matched rounded-xl to Rent Now */}
             <a
               href="/items/new"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold text-[#457300] bg-[#F2FCE2] hover:bg-[#E5F9C9] border border-[#7DCF00]/40 rounded-full transition-all hover:scale-[1.02] whitespace-nowrap shrink-0 shadow-2xs"
+              className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-bold text-[#457300] bg-[#F2FCE2] hover:bg-[#E5F9C9] border border-[#7DCF00]/40 rounded-xl transition-all hover:scale-[1.02] whitespace-nowrap shrink-0 shadow-2xs"
             >
               <span>List Your Gear</span>
-              <span className="bg-[#7DCF00] text-slate-950 text-[10px] font-black px-1.5 py-0.2 rounded-full">
+              <span className="bg-[#7DCF00] text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded-md">
                 Earn
               </span>
             </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
               Sign In
             </a>
 
-            {/* Primary Action Button (Clean #7DCF00 pill with subtle lighting spread glow, no icons) */}
+            {/* Primary Action Button (Clean #7DCF00 with matched rounded-xl) */}
             <a
               href="/items"
               className="btn-primary-glow px-4 sm:px-5 py-2 rounded-xl text-sm font-bold text-slate-950 tracking-tight whitespace-nowrap inline-flex items-center justify-center cursor-pointer"
@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-3">
             <a
               href="/items"
-              className="btn-primary-glow px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-950"
+              className="btn-primary-glow px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-950"
             >
               Rent Now
             </a>
