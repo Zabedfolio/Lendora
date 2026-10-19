@@ -64,17 +64,24 @@ export default function Navbar() {
               >
                 Trust & Safety
               </a>
-              <a
-                href="#lister"
-                className="hover:text-slate-900 transition-colors whitespace-nowrap"
-              >
-                List Your Gear
-              </a>
             </nav>
           </div>
 
           {/* Right Action Elements */}
-          <div className="hidden md:flex items-center gap-6 shrink-0">
+          <div className="hidden md:flex items-center gap-4 shrink-0">
+            {/* Highlighted List Your Gear Pill */}
+            <a
+              href="#lister"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold text-[#457300] bg-[#F2FCE2] hover:bg-[#E5F9C9] border border-[#7DCF00]/40 rounded-full transition-all hover:scale-[1.02] whitespace-nowrap shrink-0 shadow-2xs"
+            >
+              <span>List Your Gear</span>
+              <span className="bg-[#7DCF00] text-slate-950 text-[10px] font-black px-1.5 py-0.2 rounded-full">
+                Earn
+              </span>
+            </a>
+
+            <div className="h-4 w-px bg-slate-200 mx-0.5 shrink-0" />
+
             {/* Sign in text button */}
             <a
               href="#login"
@@ -147,9 +154,12 @@ export default function Navbar() {
             <a
               href="#lister"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-2 hover:text-slate-900"
+              className="flex items-center justify-between px-3 py-2 text-sm font-semibold text-slate-800 bg-[#F2FCE2] hover:bg-[#E5F9C9] rounded-xl border border-[#7DCF00]/30"
             >
-              List Your Gear
+              <span>List Your Gear</span>
+              <span className="text-[10px] bg-[#7DCF00] text-slate-950 font-black px-2 py-0.5 rounded-full">
+                Earn
+              </span>
             </a>
           </nav>
 
