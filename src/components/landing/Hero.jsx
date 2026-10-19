@@ -10,17 +10,23 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Top Kicker Badge — Sleek, High-Contrast Studio Tag */}
-          <div className="inline-flex items-center gap-2.5 p-1 pl-3.5 pr-1.5 rounded-full bg-white border border-slate-200/90 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.06)] hover:border-slate-300 transition-all duration-200 mb-8">
-            <span className="flex items-center gap-2 text-xs font-semibold text-slate-800 tracking-tight">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#7DCF00] shadow-[0_0_6px_#7DCF00]" />
-              The #1 Peer-to-Peer Rental Marketplace
+          {/* Top Kicker — High-Contrast Obsidian Tech Badge */}
+          <a
+            href="#explore"
+            className="group inline-flex items-center gap-2.5 p-1 pl-1.5 pr-4 rounded-full bg-slate-950 hover:bg-slate-900 text-white shadow-[0_4px_20px_-4px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_-4px_rgba(15,23,42,0.25)] transition-all duration-300 mb-8 cursor-pointer border border-slate-800"
+          >
+            <span className="px-2.5 py-0.5 rounded-full bg-[#7DCF00] text-slate-950 text-[10px] font-black uppercase tracking-wider">
+              Marketplace
             </span>
-            <span className="h-3 w-px bg-slate-200" />
-            <span className="text-[11px] font-bold text-[#3B6600] bg-[#F2FCE2] px-2.5 py-0.5 rounded-full border border-[#7DCF00]/30 tracking-tight">
-              Save 90% vs Buying
+            <span className="text-xs font-medium text-slate-300">
+              The #1 Peer-to-Peer Platform
             </span>
-          </div>
+            <span className="h-3 w-px bg-slate-800" />
+            <span className="text-xs font-bold text-[#7DCF00] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
+              <span>Save 90% vs Buying</span>
+              <span className="text-slate-400 group-hover:text-white transition-colors">&rarr;</span>
+            </span>
+          </a>
 
           {/* Main Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12] mb-6">
