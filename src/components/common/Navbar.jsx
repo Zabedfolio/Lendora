@@ -23,8 +23,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Left: Brand Logo + Nav Links (Turfgen style) */}
           <div className="flex items-center gap-8 lg:gap-10">
-            {/* Logo */}
-            <a href="#" className="flex items-center gap-2.5 shrink-0 group">
+            {/* Logo links to home root "/" */}
+            <a href="/" className="flex items-center gap-2.5 shrink-0 group focus:outline-none">
               <img
                 src="/Lendora-logo.png"
                 alt="Lendora"
@@ -38,28 +38,28 @@ export default function Navbar() {
               </span>
             </a>
 
-            {/* Desktop Navigation Links — Pure text, no icons or emojis */}
+            {/* Desktop Navigation Links — Multi-page URLs without hash '#' */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-7 text-sm font-medium text-slate-500">
               <a
-                href="#explore"
+                href="/items"
                 className="hover:text-slate-900 transition-colors whitespace-nowrap"
               >
                 Explore Gear
               </a>
               <a
-                href="#categories"
+                href="/categories"
                 className="hover:text-slate-900 transition-colors whitespace-nowrap"
               >
                 Categories
               </a>
               <a
-                href="#how-it-works"
+                href="/how-it-works"
                 className="hover:text-slate-900 transition-colors whitespace-nowrap"
               >
                 How It Works
               </a>
               <a
-                href="#trust"
+                href="/trust"
                 className="hover:text-slate-900 transition-colors whitespace-nowrap"
               >
                 Trust & Safety
@@ -71,7 +71,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4 shrink-0">
             {/* Highlighted List Your Gear Pill */}
             <a
-              href="#lister"
+              href="/items/new"
               className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold text-[#457300] bg-[#F2FCE2] hover:bg-[#E5F9C9] border border-[#7DCF00]/40 rounded-full transition-all hover:scale-[1.02] whitespace-nowrap shrink-0 shadow-2xs"
             >
               <span>List Your Gear</span>
@@ -84,7 +84,7 @@ export default function Navbar() {
 
             {/* Sign in text button */}
             <a
-              href="#login"
+              href="/login"
               className="text-sm font-semibold text-slate-700 hover:text-slate-950 transition-colors whitespace-nowrap"
             >
               Sign In
@@ -92,7 +92,7 @@ export default function Navbar() {
 
             {/* Primary Action Button (Clean #7DCF00 pill with subtle lighting spread glow, no icons) */}
             <a
-              href="#explore"
+              href="/items"
               className="btn-primary-glow px-4 sm:px-5 py-2 rounded-xl text-sm font-bold text-slate-950 tracking-tight whitespace-nowrap inline-flex items-center justify-center cursor-pointer"
             >
               Rent Now
@@ -102,7 +102,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-3">
             <a
-              href="#explore"
+              href="/items"
               className="btn-primary-glow px-3.5 py-1.5 rounded-lg text-xs font-bold text-slate-950"
             >
               Rent Now
@@ -124,35 +124,35 @@ export default function Navbar() {
         <div className="md:hidden border-t border-slate-100 bg-white px-5 pt-3 pb-6 space-y-3 shadow-lg">
           <nav className="flex flex-col space-y-2 text-sm font-medium text-slate-600">
             <a
-              href="#explore"
+              href="/items"
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 hover:text-slate-900"
             >
               Explore Gear
             </a>
             <a
-              href="#categories"
+              href="/categories"
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 hover:text-slate-900"
             >
               Categories
             </a>
             <a
-              href="#how-it-works"
+              href="/how-it-works"
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 hover:text-slate-900"
             >
               How It Works
             </a>
             <a
-              href="#trust"
+              href="/trust"
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 hover:text-slate-900"
             >
               Trust & Safety
             </a>
             <a
-              href="#lister"
+              href="/items/new"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-between px-3 py-2 text-sm font-semibold text-slate-800 bg-[#F2FCE2] hover:bg-[#E5F9C9] rounded-xl border border-[#7DCF00]/30"
             >
@@ -165,14 +165,14 @@ export default function Navbar() {
 
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
             <a
-              href="#login"
+              href="/login"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 rounded-lg"
             >
               Sign In
             </a>
             <a
-              href="#explore"
+              href="/items"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary-glow w-full text-center py-2.5 text-sm font-bold text-slate-950 rounded-xl"
             >

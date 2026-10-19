@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="text-center max-w-4xl mx-auto">
           {/* Top Kicker — High-Contrast Obsidian Tech Badge */}
           <a
-            href="#explore"
+            href="/items"
             className="group inline-flex items-center gap-2.5 p-1 pl-1.5 pr-4 rounded-full bg-slate-950 hover:bg-slate-900 text-white shadow-[0_4px_20px_-4px_rgba(15,23,42,0.15)] hover:shadow-[0_8px_25px_-4px_rgba(15,23,42,0.25)] transition-all duration-300 mb-8 cursor-pointer border border-slate-800"
           >
             <span className="px-2.5 py-0.5 rounded-full bg-[#7DCF00] text-slate-950 text-[10px] font-black uppercase tracking-wider">
@@ -44,7 +44,7 @@ export default function Hero() {
           {/* Action CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10">
             <a
-              href="#explore"
+              href="/items"
               className="btn-primary-glow w-full sm:w-auto px-7 py-3.5 rounded-xl text-base inline-flex items-center justify-center gap-2.5 font-bold cursor-pointer"
             >
               <span>Explore Gear Available Now</span>
@@ -52,7 +52,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="#lister"
+              href="/items/new"
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-base font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200/90 hover:border-[#7DCF00]/50 transition-all shadow-xs hover:shadow-md inline-flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Monetize Your Idle Gear</span>
