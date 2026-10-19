@@ -37,11 +37,11 @@ export default function RentalSearchBar() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      {/* Unified Search Pill Container — No inner box borders */}
-      <div className="bg-white p-1.5 sm:p-2 rounded-2xl md:rounded-full border border-slate-200 shadow-[0_12px_36px_-6px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_40px_-6px_rgba(15,23,42,0.12)] transition-shadow duration-300">
+      {/* Search Container — Restored original curve (rounded-2xl sm:rounded-3xl) without inner box borders */}
+      <div className="bg-white p-2 sm:p-2.5 rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-[0_15px_35px_-5px_rgba(15,23,42,0.08),0_0_20px_rgba(125,207,0,0.12)]">
         <form onSubmit={handleSearch} className="flex flex-col md:flex-row items-stretch md:items-center">
           {/* Keyword Search Field */}
-          <div className="flex-1 flex items-center gap-3.5 px-4 sm:px-5 py-2 rounded-xl md:rounded-full hover:bg-slate-50/90 focus-within:bg-slate-50/90 transition-colors">
+          <div className="flex-1 flex items-center gap-3.5 px-4 sm:px-5 py-2.5 rounded-xl hover:bg-slate-50/90 focus-within:bg-slate-50/90 transition-colors">
             <Search className="w-5 h-5 text-slate-400 shrink-0" />
             <div className="w-full text-left">
               <label htmlFor="search-gear" className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">
@@ -59,10 +59,10 @@ export default function RentalSearchBar() {
           </div>
 
           {/* Hairline Divider */}
-          <div className="hidden md:block h-8 w-px bg-slate-200 shrink-0" />
+          <div className="hidden md:block h-8 w-px bg-slate-200 shrink-0 mx-1" />
 
           {/* Category Dropdown Field */}
-          <div className="w-full md:w-52 flex items-center gap-3 px-4 sm:px-5 py-2 rounded-xl md:rounded-full hover:bg-slate-50/90 focus-within:bg-slate-50/90 transition-colors">
+          <div className="w-full md:w-52 flex items-center gap-3 px-4 sm:px-5 py-2.5 rounded-xl hover:bg-slate-50/90 focus-within:bg-slate-50/90 transition-colors">
             <SlidersHorizontal className="w-4 h-4 text-slate-400 shrink-0" />
             <div className="w-full text-left">
               <label htmlFor="search-cat" className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">
@@ -84,10 +84,10 @@ export default function RentalSearchBar() {
           </div>
 
           {/* Hairline Divider */}
-          <div className="hidden md:block h-8 w-px bg-slate-200 shrink-0" />
+          <div className="hidden md:block h-8 w-px bg-slate-200 shrink-0 mx-1" />
 
           {/* Location Field */}
-          <div className="w-full md:w-48 flex items-center gap-3 px-4 sm:px-5 py-2 rounded-xl md:rounded-full hover:bg-slate-50/90 focus-within:bg-slate-50/90 transition-colors">
+          <div className="w-full md:w-48 flex items-center gap-3 px-4 sm:px-5 py-2.5 rounded-xl hover:bg-slate-50/90 focus-within:bg-slate-50/90 transition-colors">
             <MapPin className="w-4 h-4 text-slate-400 shrink-0" />
             <div className="w-full text-left">
               <label htmlFor="search-loc" className="block text-[10px] font-bold uppercase tracking-wider text-slate-400">
@@ -104,11 +104,11 @@ export default function RentalSearchBar() {
             </div>
           </div>
 
-          {/* Search Button with subtle glow */}
+          {/* Search Button with original curve */}
           <div className="p-1 shrink-0">
             <button
               type="submit"
-              className="btn-primary-glow w-full md:w-auto px-6 py-3 rounded-xl md:rounded-full flex items-center justify-center gap-2 text-sm font-bold text-slate-950 cursor-pointer"
+              className="btn-primary-glow w-full md:w-auto px-6 py-3 rounded-xl md:rounded-2xl flex items-center justify-center gap-2 text-sm font-bold text-slate-950 cursor-pointer"
             >
               <span>Search</span>
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
