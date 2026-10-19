@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Sun } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -74,17 +74,7 @@ export default function Navbar() {
           </div>
 
           {/* Right Action Elements */}
-          <div className="hidden md:flex items-center gap-5 shrink-0">
-            {/* Light mode indicator icon like the screenshot */}
-            <button
-              type="button"
-              className="p-1.5 text-slate-500 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors cursor-pointer"
-              aria-label="Light theme active"
-              title="Light theme"
-            >
-              <Sun className="w-4 h-4 stroke-[2]" />
-            </button>
-
+          <div className="hidden md:flex items-center gap-6 shrink-0">
             {/* Sign in text button */}
             <a
               href="#login"
