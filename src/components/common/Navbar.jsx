@@ -26,12 +26,9 @@ export default function Navbar() {
             {/* Logo links to home root "/" */}
             <a href="/" className="flex items-center gap-2.5 shrink-0 group focus:outline-none">
               <img
-                src="/Lendora-logo.png"
+                src="/Lendora-icon.png"
                 alt="Lendora"
-                className="h-7 sm:h-8 w-auto object-contain transition-transform group-hover:scale-105"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                }}
+                className="h-8 w-8 sm:h-9 sm:w-9 object-contain rounded-xl shadow-[0_2px_10px_rgba(125,207,0,0.3)] transition-transform group-hover:scale-105 shrink-0"
               />
               <span className="font-bold text-xl tracking-tight text-slate-900">
                 Lendora
