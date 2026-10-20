@@ -8,6 +8,7 @@ import AvailabilityShowcase from './components/landing/AvailabilityShowcase'
 import ComparisonMatrix from './components/landing/ComparisonMatrix'
 import ListerCalculator from './components/landing/ListerCalculator'
 import CircularEconomyImpact from './components/landing/CircularEconomyImpact'
+import CommunityStories from './components/landing/CommunityStories'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <ComparisonMatrix />
         <ListerCalculator />
         <CircularEconomyImpact />
+        <CommunityStories />
       </main>
     </div>
   )
