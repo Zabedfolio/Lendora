@@ -1,5 +1,7 @@
 import Navbar from './components/common/Navbar'
 import Hero from './components/landing/Hero'
+import HowItWorks from './components/landing/HowItWorks'
+import TrustSecurity from './components/landing/TrustSecurity'
 
 function App() {
   return (
@@ -7,6 +9,8 @@ function App() {
       <Navbar />
       <main className="flex-1 flex flex-col">
         <Hero />
+        <HowItWorks />
+        <TrustSecurity />
       </main>
     </div>
   )
