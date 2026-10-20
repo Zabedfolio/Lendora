@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import {
   Calendar,
-  Lock,
   CheckCircle2,
-  AlertCircle,
-  Database,
   ArrowRight,
-  ShieldCheck
+  ShieldCheck,
+  Clock,
+  Sparkles
 } from 'lucide-react'
 
 export default function AvailabilityShowcase() {
@@ -15,8 +14,8 @@ export default function AvailabilityShowcase() {
   const serviceFeePercent = 5
 
   // Mock days in October (28 days displayed)
-  // 18-20 are booked by another user
-  // 14 is blocked for maintenance
+  // 18-20 are booked by another renter
+  // 14 is blocked by owner for maintenance
   const bookedDays = [18, 19, 20]
   const maintenanceDays = [14]
 
@@ -50,39 +49,41 @@ export default function AvailabilityShowcase() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2FCE2] border border-[#7DCF00]/30 text-[#4D8000] text-xs font-bold uppercase tracking-wider mb-3">
-            <Database className="w-3.5 h-3.5 text-[#68B000]" />
-            Deterministic Availability Engine
+            <Calendar className="w-3.5 h-3.5 text-[#68B000]" />
+            Real-Time Availability & Pricing
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
             Zero Double-Bookings. Guaranteed.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed">
-            Unlike retail e-commerce, rentals rely on precise inclusive date ranges. Lendora prevents race conditions with PostgreSQL row-level locks and strict availability validation.
+            Pick your rental dates on our live interactive calendar. Our smart scheduling automatically prevents reservation conflicts so your gear is 100% reserved and ready when your project begins.
           </p>
         </div>
 
-        {/* Interactive Engine Sandbox Widget */}
+        {/* Interactive Calendar Showcase Widget */}
         <div className="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200/90 shadow-[0_12px_40px_-10px_rgba(15,23,42,0.08)] overflow-hidden">
-          {/* Top Terminal Bar */}
-          <div className="bg-slate-950 px-6 py-3.5 flex items-center justify-between text-xs border-b border-slate-800">
-            <div className="flex items-center gap-2 font-mono text-slate-400">
-              <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-              <span className="ml-2 text-slate-300 font-semibold">
-                PostgreSQL Transaction Sandbox • Row Locking Engine
+          {/* Top Status Header */}
+          <div className="bg-slate-900 px-6 py-4 flex items-center justify-between text-xs border-b border-slate-800">
+            <div className="flex items-center gap-2.5 text-white font-medium">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#7DCF00] animate-pulse" />
+              <span className="font-semibold text-slate-200">
+                Live Rental Schedule
+              </span>
+              <span className="text-slate-500">•</span>
+              <span className="text-slate-400 hidden sm:inline">
+                Instant Reservation Protection
               </span>
             </div>
 
-            <div className="hidden sm:flex items-center gap-2 text-[#7DCF00] font-mono text-[11px] font-bold">
-              <Lock className="w-3.5 h-3.5" />
-              <span>SELECT FOR UPDATE ACID Lock</span>
+            <div className="flex items-center gap-1.5 text-[#7DCF00] text-xs font-bold bg-[#7DCF00]/10 px-3 py-1 rounded-full border border-[#7DCF00]/20">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>Conflict-Free Booking</span>
             </div>
           </div>
 
-          {/* Interactive Sandbox Body */}
+          {/* Interactive Showcase Body */}
           <div className="grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
-            {/* Left: Interactive Calendar Range Preview */}
+            {/* Left: Interactive Calendar Range Picker */}
             <div className="lg:col-span-7 p-7 sm:p-8">
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -90,16 +91,16 @@ export default function AvailabilityShowcase() {
                     October 2026 Reservation Calendar
                   </h3>
                   <p className="text-xs text-slate-500">
-                    Click available dates to test real-time conflict checking
+                    Click available dates to test real-time schedule selection
                   </p>
                 </div>
 
                 <span className="text-xs font-bold bg-slate-100 px-2.5 py-1 rounded-md text-slate-700">
-                  Sony FX3 Rig
+                  Sony FX3 Cinema Rig
                 </span>
               </div>
 
-              {/* Calendar Grid (Days 10 to 30) */}
+              {/* Calendar Grid (Days 4 to 31) */}
               <div className="grid grid-cols-7 gap-2 text-center text-xs font-semibold mb-6">
                 {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => (
                   <span key={i} className="text-slate-400 text-[11px] font-bold uppercase py-1">
@@ -152,36 +153,36 @@ export default function AvailabilityShowcase() {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-3 h-3 rounded-md bg-rose-100 border border-rose-300" />
-                  Confirmed Booking (Locked)
+                  Reserved by Another Renter
                 </span>
                 <span className="flex items-center gap-1.5">
                   <span className="w-3 h-3 rounded-md bg-amber-100 border border-amber-300" />
-                  Owner Block
+                  Owner Maintenance
                 </span>
               </div>
             </div>
 
-            {/* Right: Authoritative Server Price Calculation */}
+            {/* Right: Transparent Price Breakdown */}
             <div className="lg:col-span-5 p-7 sm:p-8 bg-slate-50/50 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                    Authoritative Pricing Engine
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                    Rental Price Summary
                   </span>
                   <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[#457300] bg-[#F2FCE2] px-2 py-0.5 rounded-full border border-[#7DCF00]/30">
                     <CheckCircle2 className="w-3 h-3 text-[#68B000]" />
-                    Available
+                    Dates Available
                   </span>
                 </div>
 
                 <div className="space-y-3 text-sm pt-2">
                   <div className="flex items-center justify-between text-slate-600">
                     <span>Daily Rate</span>
-                    <span className="font-semibold text-slate-900">${dailyRate}.00/day</span>
+                    <span className="font-semibold text-slate-900">${dailyRate}.00 / day</span>
                   </div>
 
                   <div className="flex items-center justify-between text-slate-600">
-                    <span>Inclusive Rental Duration</span>
+                    <span>Rental Duration</span>
                     <span className="font-semibold text-slate-900 font-mono">
                       {totalDays} days ({selectedRange.start}–{selectedRange.end} Oct)
                     </span>
@@ -196,7 +197,7 @@ export default function AvailabilityShowcase() {
 
                   <div className="flex items-center justify-between text-slate-600">
                     <span className="flex items-center gap-1">
-                      Platform Protection & Fee (5%)
+                      Protection & Service Fee (5%)
                     </span>
                     <span className="font-semibold text-slate-900 font-mono">
                       ${serviceFee.toFixed(2)}
@@ -208,8 +209,8 @@ export default function AvailabilityShowcase() {
                       <div className="text-base font-extrabold text-slate-900">
                         Total Price
                       </div>
-                      <div className="text-[11px] text-slate-400">
-                        Computed on server only
+                      <div className="text-[11px] text-slate-500">
+                        Transparent upfront rate • No hidden fees
                       </div>
                     </div>
                     <div className="text-2xl font-black text-slate-950 font-mono">
@@ -218,11 +219,15 @@ export default function AvailabilityShowcase() {
                   </div>
                 </div>
 
-                {/* Overlap Formula Code Box */}
-                <div className="mt-6 p-3 rounded-xl bg-slate-900 text-slate-200 font-mono text-[11px] leading-relaxed border border-slate-800">
-                  <div className="text-[#7DCF00] font-bold mb-1">// SQL Overlap Formula</div>
-                  <div>existing.start &lt;= requested.end</div>
-                  <div>AND existing.end &gt;= requested.start</div>
+                {/* Consumer Trust Card (Replaces Code Box) */}
+                <div className="mt-6 p-4 rounded-xl bg-white border border-slate-200/90 shadow-sm space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-900">
+                    <ShieldCheck className="w-4 h-4 text-[#68B000]" />
+                    <span>Lendora Guarantee Included</span>
+                  </div>
+                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                    Selected dates are locked immediately upon host confirmation. All deposits remain protected in escrow until you inspect your gear.
+                  </p>
                 </div>
               </div>
 
@@ -232,7 +237,7 @@ export default function AvailabilityShowcase() {
                   href="/items"
                   className="btn-primary-glow w-full py-3 rounded-xl text-center text-xs font-bold text-slate-950 inline-flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Test Real Bookings in Catalog</span>
+                  <span>Browse Gear & Book Dates</span>
                   <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
                 </a>
               </div>

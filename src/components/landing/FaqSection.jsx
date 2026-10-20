@@ -19,7 +19,7 @@ export default function FaqSection() {
       icon: Calendar,
       question: 'How does Lendora prevent double-booking on overlapping dates?',
       answer:
-        'Lendora features a proprietary Availability Engine running on PostgreSQL. Every date range query checks inclusive overlap (existing.start <= requested.end AND existing.end >= requested.start). When a host confirms a booking, the system executes an ACID transaction with row-level locking (SELECT ... FOR UPDATE) to guarantee that conflicting requests are blocked simultaneously.'
+        'Lendora uses automated real-time calendar synchronization. When you select rental dates, our system instantly checks all active reservations. Once a host accepts your request, those dates are locked immediately across the entire marketplace so no other renter can book them.'
     },
     {
       id: 1,
