@@ -3,6 +3,7 @@ import Hero from './components/landing/Hero'
 import HowItWorks from './components/landing/HowItWorks'
 import TrustSecurity from './components/landing/TrustSecurity'
 import CategoriesShowcase from './components/landing/CategoriesShowcase'
+import FeaturedGearGrid from './components/landing/FeaturedGearGrid'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <HowItWorks />
         <TrustSecurity />
         <CategoriesShowcase />
+        <FeaturedGearGrid />
       </main>
     </div>
   )
