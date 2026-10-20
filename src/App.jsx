@@ -1,5 +1,17 @@
 import Navbar from './components/common/Navbar'
 import Hero from './components/landing/Hero'
+import HowItWorks from './components/landing/HowItWorks'
+import TrustSecurity from './components/landing/TrustSecurity'
+import CategoriesShowcase from './components/landing/CategoriesShowcase'
+import FeaturedGearGrid from './components/landing/FeaturedGearGrid'
+import AvailabilityShowcase from './components/landing/AvailabilityShowcase'
+import ComparisonMatrix from './components/landing/ComparisonMatrix'
+import ListerCalculator from './components/landing/ListerCalculator'
+import CircularEconomyImpact from './components/landing/CircularEconomyImpact'
+import CommunityStories from './components/landing/CommunityStories'
+import FaqSection from './components/landing/FaqSection'
+import FinalCtaBanner from './components/landing/FinalCtaBanner'
+import Footer from './components/common/Footer'
 
 function App() {
   return (
@@ -7,7 +19,19 @@ function App() {
       <Navbar />
       <main className="flex-1 flex flex-col">
         <Hero />
+        <HowItWorks />
+        <TrustSecurity />
+        <CategoriesShowcase />
+        <FeaturedGearGrid />
+        <AvailabilityShowcase />
+        <ComparisonMatrix />
+        <ListerCalculator />
+        <CircularEconomyImpact />
+        <CommunityStories />
+        <FaqSection />
+        <FinalCtaBanner />
       </main>
+      <Footer />
     </div>
   )
 }
