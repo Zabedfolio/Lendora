@@ -9,6 +9,7 @@ import ComparisonMatrix from './components/landing/ComparisonMatrix'
 import ListerCalculator from './components/landing/ListerCalculator'
 import CircularEconomyImpact from './components/landing/CircularEconomyImpact'
 import CommunityStories from './components/landing/CommunityStories'
+import FaqSection from './components/landing/FaqSection'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <ListerCalculator />
         <CircularEconomyImpact />
         <CommunityStories />
+        <FaqSection />
       </main>
     </div>
   )
