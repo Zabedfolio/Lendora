@@ -6,6 +6,7 @@ import CategoriesShowcase from './components/landing/CategoriesShowcase'
 import FeaturedGearGrid from './components/landing/FeaturedGearGrid'
 import AvailabilityShowcase from './components/landing/AvailabilityShowcase'
 import ComparisonMatrix from './components/landing/ComparisonMatrix'
+import ListerCalculator from './components/landing/ListerCalculator'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <FeaturedGearGrid />
         <AvailabilityShowcase />
         <ComparisonMatrix />
+        <ListerCalculator />
       </main>
     </div>
   )
