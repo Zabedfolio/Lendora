@@ -7,6 +7,7 @@ import FeaturedGearGrid from './components/landing/FeaturedGearGrid'
 import AvailabilityShowcase from './components/landing/AvailabilityShowcase'
 import ComparisonMatrix from './components/landing/ComparisonMatrix'
 import ListerCalculator from './components/landing/ListerCalculator'
+import CircularEconomyImpact from './components/landing/CircularEconomyImpact'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <AvailabilityShowcase />
         <ComparisonMatrix />
         <ListerCalculator />
+        <CircularEconomyImpact />
       </main>
     </div>
   )
