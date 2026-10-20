@@ -86,14 +86,8 @@ export default function Footer() {
             </a>
 
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              The premier peer-to-peer equipment rental marketplace on the PERN stack. Rent top-tier creative and industrial gear with zero double-booking and full escrow protection.
+              The premier peer-to-peer equipment rental marketplace. Rent top-tier creative and industrial gear with zero double-booking and full escrow protection.
             </p>
-
-            {/* Project / Mid-Exam Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-[#7DCF00] animate-pulse" />
-              <span>PERN Stack Marketplace • Mid-Exam Edition</span>
-            </div>
 
             {/* Social Icons matching reference circular pill styling */}
             <div className="flex items-center gap-3 pt-2">
