@@ -5,6 +5,7 @@ import TrustSecurity from './components/landing/TrustSecurity'
 import CategoriesShowcase from './components/landing/CategoriesShowcase'
 import FeaturedGearGrid from './components/landing/FeaturedGearGrid'
 import AvailabilityShowcase from './components/landing/AvailabilityShowcase'
+import ComparisonMatrix from './components/landing/ComparisonMatrix'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <CategoriesShowcase />
         <FeaturedGearGrid />
         <AvailabilityShowcase />
+        <ComparisonMatrix />
       </main>
     </div>
   )
