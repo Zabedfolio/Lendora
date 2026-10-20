@@ -10,6 +10,8 @@ import ListerCalculator from './components/landing/ListerCalculator'
 import CircularEconomyImpact from './components/landing/CircularEconomyImpact'
 import CommunityStories from './components/landing/CommunityStories'
 import FaqSection from './components/landing/FaqSection'
+import FinalCtaBanner from './components/landing/FinalCtaBanner'
+import Footer from './components/common/Footer'
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
         <CircularEconomyImpact />
         <CommunityStories />
         <FaqSection />
+        <FinalCtaBanner />
       </main>
+      <Footer />
     </div>
   )
 }
