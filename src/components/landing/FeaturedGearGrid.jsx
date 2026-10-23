@@ -26,6 +26,7 @@ export default function FeaturedGearGrid() {
       category: 'cameras',
       categoryName: 'Cinema Camera',
       title: 'Sony FX3 Full-Frame Cinema Line + 24-70mm GM II',
+      image: '/gear/sony-fx3.jpg',
       dailyPrice: 95,
       retailValue: '$4,200',
       rating: 4.98,
@@ -42,6 +43,7 @@ export default function FeaturedGearGrid() {
       category: 'drones',
       categoryName: 'Pro Drone',
       title: 'DJI Mavic 3 Pro Cine (Triple-Camera Fly More Kit)',
+      image: '/gear/dji-mavic.jpg',
       dailyPrice: 70,
       retailValue: '$3,100',
       rating: 4.95,
@@ -58,6 +60,7 @@ export default function FeaturedGearGrid() {
       category: 'tools',
       categoryName: 'Power Tools',
       title: 'DeWalt 20V MAX XR 5-Tool Cordless Brushless Kit',
+      image: '/gear/dewalt-kit.jpg',
       dailyPrice: 28,
       retailValue: '$720',
       rating: 4.92,
@@ -74,6 +77,7 @@ export default function FeaturedGearGrid() {
       category: 'audio',
       categoryName: 'DJ System',
       title: 'Pioneer DJ OPUS-QUAD 4-Channel Standalone Console',
+      image: '/gear/pioneer-dj.jpg',
       dailyPrice: 85,
       retailValue: '$3,400',
       rating: 5.0,
@@ -90,6 +94,7 @@ export default function FeaturedGearGrid() {
       category: 'cameras',
       categoryName: 'Lighting Rig',
       title: 'Aputure LS 600d Pro High-Output Daylight LED Kit',
+      image: '/gear/aputure-light.jpg',
       dailyPrice: 50,
       retailValue: '$1,890',
       rating: 4.94,
@@ -106,6 +111,7 @@ export default function FeaturedGearGrid() {
       category: 'outdoors',
       categoryName: 'Overland Camping',
       title: 'iKamper Skycamp 3.0 Hard-Shell 4-Person Roof Tent',
+      image: '/gear/ikamper-tent.jpg',
       dailyPrice: 48,
       retailValue: '$4,100',
       rating: 4.97,
@@ -166,36 +172,47 @@ export default function FeaturedGearGrid() {
               className="group bg-white rounded-2xl border border-slate-200/90 shadow-[0_6px_25px_-4px_rgba(15,23,42,0.05)] hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.1),0_0_22px_rgba(125,207,0,0.14)] hover:border-[#7DCF00]/50 transition-all duration-300 flex flex-col justify-between overflow-hidden"
             >
               <div>
-                {/* Visual Gear Card Header Banner */}
-                <div className="h-44 bg-gradient-to-br from-slate-100 via-slate-50 to-[#F2FCE2]/40 p-4 relative flex flex-col justify-between border-b border-slate-100">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-extrabold tracking-wide uppercase px-2.5 py-1 rounded-md bg-white/95 text-slate-800 shadow-2xs border border-slate-200/60">
+                {/* Visual Gear Card Image Banner */}
+                <div className="h-52 relative overflow-hidden bg-slate-100 border-b border-slate-100">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 select-none"
+                    loading="lazy"
+                  />
+                  {/* Subtle gradient overlays for badge and text contrast */}
+                  <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-950/40 via-slate-950/10 to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950/50 via-slate-950/10 to-transparent pointer-events-none" />
+
+                  {/* Top Category & Status Badges */}
+                  <div className="absolute top-3 inset-x-3 flex items-center justify-between z-10">
+                    <span className="text-[11px] font-extrabold tracking-wide uppercase px-2.5 py-1 rounded-md bg-white/95 text-slate-800 shadow-sm border border-white/60 backdrop-blur-md">
                       {item.categoryName}
                     </span>
 
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-950 text-white shadow-xs">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-950/90 text-white shadow-sm backdrop-blur-md">
                       {item.badge}
                     </span>
                   </div>
 
                   {/* Gear Status Tag */}
-                  <div className="flex items-center justify-between text-xs font-semibold">
+                  <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-xs font-semibold z-10">
                     <span
-                      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
+                      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold backdrop-blur-md shadow-xs ${
                         item.availableToday
-                          ? 'bg-[#F2FCE2] text-[#3B6600] border border-[#7DCF00]/40'
-                          : 'bg-slate-200/70 text-slate-700'
+                          ? 'bg-white/95 text-[#3B6600] border border-[#7DCF00]/50'
+                          : 'bg-slate-900/90 text-slate-200 border border-white/20'
                       }`}
                     >
                       <span
                         className={`w-1.5 h-1.5 rounded-full ${
-                          item.availableToday ? 'bg-[#7DCF00]' : 'bg-slate-400'
+                          item.availableToday ? 'bg-[#7DCF00] animate-pulse' : 'bg-slate-400'
                         }`}
                       />
                       {item.availableToday ? 'Available This Week' : 'Book in Advance'}
                     </span>
 
-                    <span className="text-slate-500 font-medium">
+                    <span className="text-[11px] font-bold text-white bg-slate-950/70 backdrop-blur-md px-2.5 py-0.5 rounded-md border border-white/10 shadow-xs">
                       Retail: {item.retailValue}
                     </span>
                   </div>
